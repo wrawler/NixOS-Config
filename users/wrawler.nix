@@ -16,6 +16,7 @@
   
 	# Your Starship prompt init
 	programs.bash.promptInit = ''
+		enable = true;
 		eval "$(starship init bash)"
 	'';
   

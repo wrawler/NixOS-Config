@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+	imports = [
+		../modules/common.nix
+		../modules/programs.nix
+	];
 	# Your hardware-configuration.nix will be imported via flake.nix
 
 	networking.hostName = "nixos";
@@ -13,7 +17,6 @@
 			layout = "us";
 			variant = "";
 		};
-		digimend.enable = true;
 	};
 	
 	programs.steam = {
@@ -28,8 +31,5 @@
 	# Note: You commented out openssh, but if you want to enable it for this host:
 	# services.openssh.enable = true;
 
-	imports = [
-		../modules/common.nix
-		../modules/programs.nix
-	];
+
 }
