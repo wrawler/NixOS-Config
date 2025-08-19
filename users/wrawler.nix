@@ -11,17 +11,7 @@
 		neofetch
 		copyq # clipboard manager
 		gnome-terminal
-		starship
 	];
-  
-	# Your Starship prompt init
-	programs.bash.promptInit = ''
-		enable = true;
-		eval "$(starship init bash)"
-	'';
-  
-	# To enable the Starship prompt binary itself:
-	programs.starship.enable = true;
 
 	home.stateVersion = "25.05";
 }
