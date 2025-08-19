@@ -8,6 +8,13 @@
 	# Your hardware-configuration.nix will be imported via flake.nix
 
 	networking.hostName = "nixos";
+
+	boot.loader.grub = {
+		enable = true;
+		version = 2;
+		device = "/dev/vda"; # or /dev/sda depending on your VM disk
+	};
+
 	
 	services.xserver = {
 		enable = true;
